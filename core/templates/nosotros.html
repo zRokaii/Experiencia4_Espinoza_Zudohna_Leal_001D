@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+
+<body>
+
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="{% static 'core/img/logo.svg' %}" alt="Logotipo de Bienes Raices">
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="{% static 'core/img/barras.svg' %}" alt="Icono Menu">
+                    </a>
+                </div>
+                <nav id="navegacion" class="navegacion">
+                    <a href="{% url 'ver' %}" class="btn btn-primary">Automovil</a>
+                    <a href="{% url 'Nosotros' %}">Nosotros</a>
+                    <a href="{% url 'Anuncios' %}">Anuncios</a>
+                    <a href="{% url 'Blog' %}">Blog</a>
+                    <a href="{% url 'Contacto' %}">Contacto</a>
+                </nav>
+            </div>
+
+            <h1>Venta de Casa y Departamentos Exlusivos de Lujo</h1>
+
+        </div>
+        <!-- Contenedor -->
+    </header>
+    <!-- Inicio -->
+
+    <main class="contenedor">
+        <h1 class="fw-300 centrar-texto">Conoce Sobre Nosotros</h1>
+        <div class="contenido-nosotros">
+            <img src="{% static 'core/img/nosotros.jpg' %}" alt="Imagen Sobre Nosotros">
+            <div class="texto-nosotros">
+                <blockquote>25 Años de Experiencia</blockquote>
+                <p>
+                    Vivamus in libero sit amet metus elementum iaculis a varius libero. Phasellus dapibus ligula sed elit ornare, quis ornare dolor rutrum. Suspendisse at lobortis orci. Maecenas pellentesque dolor ut neque venenatis, a consectetur risus rhoncus. In commodo,
+                    lorem eget sodales rutrum, sem dolor maximus magna, vitae ullamcorper tortor nibh porttitor est. Sed placerat lobortis dapibus. Vivamus vestibulum risus in metus tincidunt, at mollis ante eleifend. Etiam pulvinar iaculis tincidunt.
+                    Suspendisse et massa vitae tellus scelerisque lobortis. In hac habitasse platea dictumst. Vestibulum at justo dignissim, semper massa eu, lobortis urna.
+                </P>
+                <P>
+                    Sed faucibus, erat at volutpat ultricies, lacus quam fermentum magna, ut ullamcorper ipsum nisi eget metus. Vestibulum tincidunt diam ipsum, vel dapibus neque vulputate a. Sed faucibus dignissim venenatis. Class aptent taciti sociosqu ad litora torquent
+                    per conubia nostra, per inceptos himenaeos.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="contenedor seccion">
+        <h2 class="fw-300 centrar-texto">Más Sobre Nosotros</h2>
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="{% static 'core/img/icono1.svg' %}" alt="Icono Seguridad">
+                <h3>Seguridad</h3>
+                <p>Suscipit nobis eum aspernatur est cupiditate officiis ea, laborum illum esse iusto illo veniam cumque! Ut sint alias iusto, modi corporis nesciunt!</p>
+            </div>
+
+            <div class="icono">
+                <img src="{% static 'core/img/icono2.svg' %}" alt="Icono Mejor Precio">
+                <h3>El Mejor Precio</h3>
+                <p>Suscipit nobis eum aspernatur est cupiditate officiis ea, laborum illum esse iusto illo veniam cumque! Ut sint alias iusto, modi corporis nesciunt!</p>
+            </div>
+
+            <div class="icono">
+                <img src="{% static 'core/img/icono3.svg' %}" alt="Icono A Tiempo">
+                <h3>A Tiempo</h3>
+                <p>Suscipit nobis eum aspernatur est cupiditate officiis ea, laborum illum esse iusto illo veniam cumque! Ut sint alias iusto, modi corporis nesciunt!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="{% url 'ver' %}" class="btn btn-primary">Automovil</a>
+                <a href="{% url 'Nosotros' %}">Nosotros</a>
+                <a href="{% url 'Anuncios' %}">Anuncios</a>
+                <a href="{% url 'Blog' %}">Blog</a>
+                <a href="{% url 'Contacto' %}">Contacto</a>
+            </nav>
+            <p class="copyright">Todos Los Derechos Reservados 2021 Template by: Cristian Zu-dohna/Jose Espinoza/Reinaldo Leal &copy;</p>
+        </div>
+    </footer>
+</body>
+
+</html>

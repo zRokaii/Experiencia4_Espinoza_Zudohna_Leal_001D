@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Creando Vehiculo</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+    <script>
+        $(function() {
+            $("formulario").validate({
+                rules: {
+                    patente: "required",
+                    marca: "required",
+                    modelo: "required",
+                    categoria: "required",
+                },
+
+                messages: {
+                    patente: {
+                        required: 'Ingresa tu patente',
+                    },
+                    marca: {
+                        required: 'Ingresa marca',
+                    },
+                    modelo: {
+                        required: 'Ingrese modelo',
+
+                    },
+                    categoria: {
+                        required: 'Seleccione una categoria',
+                    },
+
+                } //messages
+            }); //$('#formulario').validate
+        }); //function
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Agregando Vehículo</h1>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <form method="POST" action="#" id="formulario">
+                    {%csrf_token%}
+                    <div class="form-group">
+                        {{vehiculo_form.patente.label}} {{vehiculo_form.patente}}
+                    </div>
+                    <div class="form-group">
+                        {{vehiculo_form.marca.label}} {{vehiculo_form.marca}}
+                    </div>
+                    <div class="form-group">
+                        {{vehiculo_form.modelo.label}} {{vehiculo_form.modelo}}
+                    </div>
+                    <div class="form-group">
+                        {{vehiculo_form.categoria.label}} {{vehiculo_form.categoria}}
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-danger" id="agregar" value="Agregar">
+                        <input type="reset" class="btn btn-primary" id="limpiar" value="Borrar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <body style="background-color:rgb(164, 240, 217);"></body>
+    <center><img src="{% static 'core/img/lista.jpg' %}" width="300" height="300"></center>
+</body>
+
+</html>

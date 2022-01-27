@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+
+<body>
+
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="{% static 'core/img/logo.svg' %}" alt="Logotipo de Bienes Raices">
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="{% static 'core/img/barras.svg' %}" alt="Icono Menu">
+                    </a>
+                </div>
+                <nav id="navegacion" class="navegacion">
+                    <a href="{% url 'ver' %}">Automovil</a>
+                    <a href="{% url 'Nosotros' %}">Nosotros</a>
+                    <a href="{% url 'Anuncios' %}">Anuncios</a>
+                    <a href="{% url 'Blog' %}">Blog</a>
+                    <a href="{% url 'Contacto' %}">Contacto</a>
+                </nav>
+            </div>
+
+            <h1>Venta de Casa y Departamentos Exlusivos de Lujo</h1>
+
+        </div>
+        <!-- Contenedor -->
+    </header>
+    <!-- Inicio -->
+
+    <main class="contenedor seccion contenido-centrado">
+        <h1 class="fw-300 centrar-texto">Nuestro Blog</h1>
+
+        <article class="entrada-blog">
+            <div class="imagen">
+                <img src="{% static 'core/img/blog1.jpg' %}" alt="Entrada de blog">
+            </div>
+
+            <div class="texto-entrada">
+                <a href="{% url 'Entrada' %}">
+                    <h4>Terraza en el techo de tu casa</h4>
+                </a>
+                <p>Escrito el: <span> 20/10/2020 </span> por: <span>Admi</span> </p>
+                <p>Consejos para contruir terraza en el techo de tu casa con los mejores materiales y ahorrando tu dinero</p>
+            </div>
+        </article>
+
+        <article class="entrada-blog">
+            <div class="imagen">
+                <img src="{% static 'core/img/blog2.jpg' %}" alt="Entrada de blog">
+            </div>
+
+            <div class="texto-entrada">
+                <a href="{% url 'Entrada' %}">
+                    <h4>Construye una alberca en tu hogar</h4>
+                </a>
+                <p>Escrito el: <span> 20/10/2020 </span> por: <span>Admi</span> </p>
+                <p>Maximima el espacio en tu hogar con esta guía, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+            </div>
+        </article>
+
+        <article class="entrada-blog">
+            <div class="imagen">
+                <img src="{% static 'core/img/blog3.jpg' %}" alt="Entrada de blog">
+            </div>
+
+            <div class="texto-entrada">
+                <a href="{% url 'Entrada' %}">
+                    <h4>Guia para la decoración de tu hogar</h4>
+                </a>
+                <p>Escrito el: <span> 20/10/2020 </span> por: <span>Admi</span> </p>
+                <p>Maximima el espacio en tu hogar con esta guía, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+            </div>
+        </article>
+
+        <article class="entrada-blog">
+            <div class="imagen">
+                <img src="{% static 'core/img/blog4.jpg' %}" alt="Entrada de blog">
+            </div>
+
+            <div class="texto-entrada">
+                <a href="{% url 'Entrada' %}">
+                    <h4>Guia para la decoración de tu habitación</h4>
+                </a>
+                <p>Escrito el: <span> 20/10/2020 </span> por: <span>Admi</span> </p>
+                <p>Maximima el espacio en tu hogar con esta guía, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="{% url 'ver' %}">Automovil</a>
+                <a href="{% url 'Nosotros' %}">Nosotros</a>
+                <a href="{% url 'Anuncios' %}">Anuncios</a>
+                <a href="{% url 'Blog' %}">Blog</a>
+                <a href="{% url 'Contacto' %}">Contacto</a>
+            </nav>
+            <p class="copyright">Todos Los Derechos Reservados 2021 Template by: Cristian Zu-dohna/Jose Espinoza/Reinaldo Leal &copy;</p>
+        </div>
+    </footer>
+</body>
+
+</html>

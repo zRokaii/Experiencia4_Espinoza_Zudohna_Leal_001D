@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+
+<body>
+
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="{% static 'core/img/logo.svg' %}" alt="Logotipo de Bienes Raices">
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="{% static 'core/img/barras.svg' %}" alt="Icono Menu">
+                    </a>
+                </div>
+                <nav id="navegacion" class="navegacion">
+                    <a href="{% url 'ver' %}" class="btn btn-primary">Automovil</a>
+                    <a href="{% url 'Nosotros' %}">Nosotros</a>
+                    <a href="{% url 'Anuncios' %}">Anuncios</a>
+                    <a href="{% url 'Blog' %}">Blog</a>
+                    <a href="{% url 'Contacto' %}">Contacto</a>
+                </nav>
+            </div>
+
+            <h1>Venta de Casa y Departamentos Exclusivos de Lujo</h1>
+
+            {% if user.is_authenticated %}
+                  <a class="nav-item nav-link" href="#">{{ user.username }}<i class="fa fa-user-circle" aria-hidden="true"></i></a>
+
+
+
+                  <a class="nav-item nav-link" href="{%  url 'logout' %}">Cerrar sesión<i class="fa fa-user-times" aria-hidden="true"></i></a>
+                  {% endif %}
+
+        </div>
+        
+        <!-- Contenedor -->
+    </header>
+    <!-- Inicio -->
+
+    <section class="contenedor seccion">
+        <h2 class="fw-300 centrar-texto">Más Sobre Nosotros</h2>
+
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="{% static 'core/img/icono1.svg' %}" alt="Icono Seguridad">
+                <h3>Seguridad</h3>
+                <p>Suscipit nobis eum aspernatur est cupiditate officiis ea, laborum illum esse iusto illo veniam cumque! Ut sint alias iusto, modi corporis nesciunt!</p>
+            </div>
+
+            <div class="icono">
+                <img src="{% static 'core/img/icono2.svg' %}" alt="Icono Mejor Precio">
+                <h3>El Mejor Precio</h3>
+                <p>Suscipit nobis eum aspernatur est cupiditate officiis ea, laborum illum esse iusto illo veniam cumque! Ut sint alias iusto, modi corporis nesciunt!</p>
+            </div>
+
+            <div class="icono">
+                <img src="{% static 'core/img/icono3.svg' %}" alt="Icono A Tiempo">
+                <h3>A Tiempo</h3>
+                <p>Suscipit nobis eum aspernatur est cupiditate officiis ea, laborum illum esse iusto illo veniam cumque! Ut sint alias iusto, modi corporis nesciunt!</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="seccion contenedor">
+        <h2 class="fw-300 centrar-texto">Casa y Departamentos en Venta</h2>
+
+        <div class="contenedor-anuncios">
+            <div class="anuncio">
+                <img src="{% static 'core/img/anuncio1.jpg' %}" alt="Anuncio Casa en el lago">
+                <div class="contenido-anuncio">
+                    <h3>Casa de Lujo en el Lago</h3>
+                    <p>Casa de lago con excelente vista, acabados de lujo a un excelente precio</p>
+                    <p class="precio">$3,000,000</p>
+                    <ul class="iconos-caracteristicas">
+                        <li>
+                            <img src="{% static 'core/img/icono_wc.svg' %}" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icono_estacionamiento.svg' %}" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icono_dormitorio.svg' %}" alt="icono wc">
+                            <p>4</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                </div>
+
+            </div>
+
+            <div class="anuncio">
+                <img src="{% static 'core/img/anuncio2.jpg' %}" alt="Anuncio Casa de lujo">
+                <div class="contenido-anuncio">
+                    <h3>Casa de terminados de Lujo</h3>
+                    <p>Casa con deseño moderno, así como tecnología inteligente y amueblada</p>
+                    <p class="precio">$2,000,000</p>
+                    <ul class="iconos-caracteristicas">
+                        <li>
+                            <img src="{% static 'core/img/icono_wc.svg' %}" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icono_estacionamiento.svg' %}" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icono_dormitorio.svg' %}" alt="icono wc">
+                            <p>4</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                </div>
+
+            </div>
+
+            <div class="anuncio">
+                <img src="{% static 'core/img/anuncio3.jpg' %}" alt="Anuncio Casa con alberca">
+                <div class="contenido-anuncio">
+                    <h3>Casa con Alberca</h3>
+                    <p>Casa con alberca y acabados de lujo en la ciudad, excelente opotunidades</p>
+                    <p class="precio">$3,000,000</p>
+                    <ul class="iconos-caracteristicas">
+                        <li>
+                            <img src="{% static 'core/img/icono_wc.svg' %}" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icono_estacionamiento.svg' %}" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="{% static 'core/img/icono_dormitorio.svg' %}" alt="icono wc">
+                            <p>4</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ver-todas">
+            <a href="{% url 'Anuncios' %}" class="boton boton-verde">Ver Todas</a>
+        </div>
+    </main>
+
+    <section class="imagen-contacto">
+        <div class="contenedor contenido-contacto">
+            <h2>Encuentra la casa de tus sueños</h2>
+            <p>Llena el formulario de contactos y un asesor se pondrá en contacto contigo a la brevedad</p>
+            <a href="{% url 'Contacto' %}" class="boton boton-amarillo boton-contacto">Contactános</a>
+        </div>
+    </section>
+
+    <div class="seccion-inferior contenedor seccion">
+        <section class="blog">
+            <h3 class="centrar-texto fw-300">Nuestro Blog</h3>
+
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <img src="{% static 'core/img/blog1.jpg' %}" alt="Entrada de blog">
+                </div>
+
+                <div class="texto-entrada">
+                    <a href="{% url 'Entrada' %}">
+                        <h4>Terraza en el techo de tu casa</h4>
+                    </a>
+                    <p>Escrito el: <span> 20/10/2020 </span> por: <span>Admi</span> </p>
+                    <p>Consejos para contruir terraza en el techo de tu casa con los mejores materiales y ahorrando tu dinero</p>
+                </div>
+            </article>
+
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <img src="{% static 'core/img/blog2.jpg' %}" alt="Entrada de blog">
+                </div>
+
+                <div class="texto-entrada">
+                    <a href="{% url 'Entrada' %}">
+                        <h4>Guia para la decoración de tu hogar</h4>
+                    </a>
+                    <p>Escrito el: <span> 20/10/2020 </span> por: <span>Admi</span> </p>
+                    <p>Maximima el espacio en tu hogar con esta guía, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="testimoniales">
+            <h3 class="centrar-texto fw-300">Testimoniales</h3>
+
+            <div class="testimonial">
+                <blockquote>
+                    El personal se comporto de excelente forma, muy buena atención y la casa que me ofecieron cumple con todas mis expectativas.
+                </blockquote>
+                <p>Juan De la torre</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="{% url 'ver' %}" class="btn btn-primary">Automovil</a>
+                <a href="{% url 'Nosotros' %}">Nosotros</a>
+                <a href="{% url 'Anuncios' %}">Anuncios</a>
+                <a href="{% url 'Blog' %}">Blog</a>
+                <a href="{% url 'Contacto' %}">Contacto</a>
+            </nav>
+            <p class="copyright">Todos Los Derechos Reservados 2021 Template by: Cristian Zu-dohna/Jose Espinoza/Reinaldo Leal &copy;</p>
+        </div>
+    </footer>
+</body>
+
+</html>

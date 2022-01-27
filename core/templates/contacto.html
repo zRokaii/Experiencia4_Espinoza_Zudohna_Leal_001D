@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+
+<body>
+
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="{% static 'core/img/logo.svg' %}" alt="Logotipo de Bienes Raices">
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="{% static 'core/img/barras.svg' %}" alt="Icono Menu">
+                    </a>
+                </div>
+                <nav id="navegacion" class="navegacion">
+                    <a href="{% url 'ver' %}" class="btn btn-primary">Automovil</a>
+                    <a href="{% url 'Nosotros' %}">Nosotros</a>
+                    <a href="{% url 'Anuncios' %}">Anuncios</a>
+                    <a href="{% url 'Blog' %}">Blog</a>
+                    <a href="{% url 'Contacto' %}">Contacto</a>
+                </nav>
+            </div>
+
+            <h1>Venta de Casa y Departamentos Exlusivos de Lujo</h1>
+
+        </div>
+        <!-- Contenedor -->
+    </header>
+    <!-- Inicio -->
+
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
+    <img src="{% static 'core/img/destacada3.jpg' %}" alt="Imagen Principal">
+
+    <main class="contenedor seccion contenido-centrado">
+        <h2 class="fw-300 centrar-texto">Llenar el formulario de Contacto</h2>
+
+        <form class="contacto" action="" method="post">
+            {% csrf_token %} {{form}}
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" placeholder="Tú Nombre" required>
+
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" placeholder="Tú Correo electrónico" required>
+
+                <label for="telefono">Teléfono: </label>
+                <input type="tel" id="telefono" placeholder="Tú Teléfono" required>
+
+                <label for="mensaje">Mensaje: </label>
+                <textarea id="mensaje"></textarea>
+
+                <input type="submit" value="Guardar" class="boton boton-verde">
+        </form>
+
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="{% url 'ver' %}" class="btn btn-primary">Automovil</a>
+                <a href="{% url 'Nosotros' %}">Nosotros</a>
+                <a href="{% url 'Anuncios' %}">Anuncios</a>
+                <a href="{% url 'Blog' %}">Blog</a>
+                <a href="{% url 'Contacto' %}">Contacto</a>
+            </nav>
+            <p class="copyright">Todos Los Derechos Reservados 2021 Template by: Cristian Zu-dohna/Jose Espinoza/Reinaldo Leal &copy;</p>
+        </div>
+    </footer>
+</body>
+
+</html>

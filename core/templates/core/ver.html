@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div class="row">
+        <h1>¿Usted posee un vehiculo?</h1>
+        <h2>Ingreselo Aqui</h2>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Patente</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Opciones</th>
+                <th scope="col"></th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {%for ve in vehiculos%}
+            <tr>
+                <td>{{ve.patente}}</td>
+                <td>{{ve.marca}}</td>
+                <td>{{ve.modelo}}</td>
+                <td><a href="{% url 'form_mod_vehiculo' ve.patente%}" class="btn btn-primary">Modificar  </a></td>
+                <td><a href="{% url 'form_del_vehiculo' ve.patente%}" class="btn btn-danger">Eliminar </a></td>
+            </tr>
+            {%endfor%}
+
+        </tbody>
+    </table>
+    <a href="{% url 'crearVehiculo' %}" class="btn btn-primary">Nuevo Vehiculo  </a>
+    <a href="{% url 'home' %}" class="btn btn-primary">Volver  </a>
+
+    <body style="background-color:rgb(164, 240, 217);"></body>
+    <br>
+    <center><img src="{% static 'core/img/AUTO_2.png' %}" width="300" height="300">
+        <img src="{% static 'core/img/AUTO.jpg' %}" width="300" height="300"></center>
+
+</body>
+
+</html>

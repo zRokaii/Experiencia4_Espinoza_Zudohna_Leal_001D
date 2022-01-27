@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+
+<body>
+
+    <header class="site-header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="{% static 'core/img/logo.svg' %}" alt="Logotipo de Bienes Raices">
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="{% static 'core/img/barras.svg' %}" alt="Icono Menu">
+                    </a>
+                </div>
+                <nav id="navegacion" class="navegacion">
+                    <a href="{% url 'ver' %}" class="btn btn-primary">Automovil</a>
+                    <a href="{% url 'Nosotros' %}">Nosotros</a>
+                    <a href="{% url 'Anuncios' %}">Anuncios</a>
+                    <a href="{% url 'Blog' %}">Blog</a>
+                    <a href="{% url 'Contacto' %}">Contacto</a>
+                </nav>
+            </div>
+
+            <h1>Venta de Casa y Departamentos Exlusivos de Lujo</h1>
+
+        </div>
+        <!-- Contenedor -->
+    </header>
+    <!-- Inicio -->
+
+    <h1 class="fw-300 centrar-texto">Consejos para tener una alberca en tu casa sin gastar demasiado</h1>
+    <img src="{% static 'core/img/destacada2.jpg' %}" alt="Imagen Principal">
+
+    <main class="contenedor seccion contenido-centrado texto-entrada">
+        <p>Escrito el: <span> 20/10/2020 </span> por: <span>Admi</span> </p>
+        <p>
+            Vivamus in libero sit amet metus elementum iaculis a varius libero. Phasellus dapibus ligula sed elit ornare, quis ornare dolor rutrum. Suspendisse at lobortis orci. Maecenas pellentesque dolor ut neque venenatis, a consectetur risus rhoncus. In commodo,
+            lorem eget sodales rutrum, sem dolor maximus magna, vitae ullamcorper tortor nibh porttitor est. Sed placerat lobortis dapibus. Vivamus vestibulum risus in metus tincidunt, at mollis ante eleifend. Etiam pulvinar iaculis tincidunt. Suspendisse
+            et massa vitae tellus scelerisque lobortis. In hac habitasse platea dictumst. Vestibulum at justo dignissim, semper massa eu, lobortis urna.
+        </P>
+        <P>
+            Sed faucibus, erat at volutpat ultricies, lacus quam fermentum magna, ut ullamcorper ipsum nisi eget metus. Vestibulum tincidunt diam ipsum, vel dapibus neque vulputate a. Sed faucibus dignissim venenatis. Class aptent taciti sociosqu ad litora torquent
+            per conubia nostra, per inceptos himenaeos.
+        </p>
+        <p>
+            Vivamus in libero sit amet metus elementum iaculis a varius libero. Phasellus dapibus ligula sed elit ornare, quis ornare dolor rutrum. Suspendisse at lobortis orci. Maecenas pellentesque dolor ut neque venenatis, a consectetur risus rhoncus. In commodo,
+            lorem eget sodales rutrum, sem dolor maximus magna, vitae ullamcorper tortor nibh porttitor est. Sed placerat lobortis dapibus. Vivamus vestibulum risus in metus tincidunt, at mollis ante eleifend. Etiam pulvinar iaculis tincidunt. Suspendisse
+            et massa vitae tellus scelerisque lobortis. In hac habitasse platea dictumst. Vestibulum at justo dignissim, semper massa eu, lobortis urna.
+        </P>
+        <P>
+            Sed faucibus, erat at volutpat ultricies, lacus quam fermentum magna, ut ullamcorper ipsum nisi eget metus. Vestibulum tincidunt diam ipsum, vel dapibus neque vulputate a. Sed faucibus dignissim venenatis. Class aptent taciti sociosqu ad litora torquent
+            per conubia nostra, per inceptos himenaeos.
+        </p>
+        <p>
+            Vivamus in libero sit amet metus elementum iaculis a varius libero. Phasellus dapibus ligula sed elit ornare, quis ornare dolor rutrum. Suspendisse at lobortis orci. Maecenas pellentesque dolor ut neque venenatis, a consectetur risus rhoncus. In commodo,
+            lorem eget sodales rutrum, sem dolor maximus magna, vitae ullamcorper tortor nibh porttitor est. Sed placerat lobortis dapibus. Vivamus vestibulum risus in metus tincidunt, at mollis ante eleifend. Etiam pulvinar iaculis tincidunt. Suspendisse
+            et massa vitae tellus scelerisque lobortis. In hac habitasse platea dictumst. Vestibulum at justo dignissim, semper massa eu, lobortis urna.
+        </P>
+        <P>
+            Sed faucibus, erat at volutpat ultricies, lacus quam fermentum magna, ut ullamcorper ipsum nisi eget metus. Vestibulum tincidunt diam ipsum, vel dapibus neque vulputate a. Sed faucibus dignissim venenatis. Class aptent taciti sociosqu ad litora torquent
+            per conubia nostra, per inceptos himenaeos.
+        </p>
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="{% url 'Nosotros' %}">Nosotros</a>
+                <a href="{% url 'Anuncios' %}">Anuncios</a>
+                <a href="{% url 'Blog' %}">Blog</a>
+                <a href="{% url 'Contacto' %}">Contacto</a>
+            </nav>
+            <p class="copyright">Todos Los Derechos Reservados 2021 Template by: Cristian Zu-dohna/Jose Espinoza/Reinaldo Leal &copy;</p>
+        </div>
+    </footer>
+</body>
+
+</html>

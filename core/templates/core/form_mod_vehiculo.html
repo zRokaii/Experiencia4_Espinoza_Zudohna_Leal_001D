@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Modificando Vehiculo</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>¿Te equivocaste al ingresar tu vehículo?</h1>
+            <h2>Modificalo aquí</h2>
+        </div>
+
+        <div class="row">
+            <form method="POST" action="#" id="formulario">
+                {%csrf_token%}
+                <div class="form-group">
+                    {{form.as_table}}
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-danger" id="modificar" value="Modificar">
+                    <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <body style="background-color:rgb(164, 240, 217);"></body>
+    <center><img src="{% static 'core/img/lk.jpg' %}" width="300" height="300">
+        <img src="{% static 'core/img/kl.jpg' %}" width="300" height="300"></center>
+</body>
+
+</html>
